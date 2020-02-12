@@ -1,26 +1,43 @@
 import styled from 'styled-components/native';
 
-export const Container = styled.View`
+export const Container = styled.ScrollView.attrs({
+  horizontal: false,
+  contentContainerStyle: { paddingBottom: 30, paddingTop: 30, paddingLeft: 10, paddingRight: 10 },
+  showHorizontalScrollIndicator: false,
+})`
   flex: 1;
-  padding: 20px;
 `;
 
-export const ProductList = styled.ScrollView.attrs({
+export const ProductByCategory = styled.View`
+  margin-bottom: 50px;
+`;
+
+export const ProductGroup = styled.ScrollView.attrs({
   horizontal: true,
   contentContainerStyle: { paddingBottom: 10, paddingTop: 10 },
   showHorizontalScrollIndicator: false,
 })``;
 
-export const ProductBox = styled.View`
+export const CategoryBox = styled.View`
+  padding: 0 10px;
+  color: #666;
+`;
+
+export const Category = styled.Text`
+  font-size: 22px;
+`;
+
+export const Product = styled.View`
   background-color: #333;
   padding: 0;
   border-color: #ddd;
   border-width: 1px;
-  width: 250px;
-  height: 250px;
+  width: 260px;
+  height: 260px;
   justify-content: center;
   align-items: center;
-  elevation: 10;
+  elevation: 5;
+  margin: 0 5px;
 `;
 
 export const Thumbnail = styled.Image`
@@ -49,7 +66,7 @@ export const ProductPrice = styled.Text`
 
 export const AddToCart = styled.TouchableOpacity`
   background-color: #21FF7A;
-  padding: 4px;
+  padding: 8px;
   align-items: center;
   justify-content: center;
   flex: 1;
