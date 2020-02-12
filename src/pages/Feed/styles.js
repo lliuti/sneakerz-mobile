@@ -6,6 +6,7 @@ export const Container = styled.ScrollView.attrs({
   showHorizontalScrollIndicator: false,
 })`
   flex: 1;
+  margin-top: 20px;
 `;
 
 export const ProductByCategory = styled.View`
@@ -65,7 +66,7 @@ export const ProductPrice = styled.Text`
 `;
 
 export const AddToCart = styled.TouchableOpacity`
-  background-color: #21FF7A;
+  background-color: #AA5EFF;
   padding: 8px;
   align-items: center;
   justify-content: center;
