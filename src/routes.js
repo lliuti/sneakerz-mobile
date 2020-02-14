@@ -13,9 +13,9 @@ export default function Routes() {
     <NavigationContainer>
       <Tab.Navigator
         tabBarOptions={{
-          activeTintColor: '#222',
-          inactiveTintColor: '#c5c5c5',
-          // showLabel: false,
+          activeTintColor: '#AA5EFF',
+          inactiveTintColor: '#999',
+          showLabel: false,
         }}
       >
         <Tab.Screen
@@ -31,8 +31,8 @@ export default function Routes() {
               color: '#fff',
               fontSize: 24,
             },
-            tabBarIcon: ({ tintColor }) => (
-              <MaterialIcons name='store-mall-directory' size={32} color='#666' />
+            tabBarIcon: ({ color }) => (
+              <MaterialIcons name='store-mall-directory' size={32} color={color} />
             ),
           }}
         />
@@ -49,8 +49,8 @@ export default function Routes() {
               color: '#fff',
               fontSize: 24,
             },
-            tabBarIcon: () => (
-              <MaterialIcons name='shopping-cart' size={32} color='#666' />
+            tabBarIcon: ({ color }) => (
+              <MaterialIcons name='shopping-cart' size={32} color={color} />
             ),
             
           }}
