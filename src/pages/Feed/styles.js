@@ -29,7 +29,7 @@ export const Category = styled.Text`
   font-size: 22px;
 `;
 
-export const Product = styled.View`
+export const Product = styled.TouchableOpacity`
   background-color: #333;
   padding: 0;
   border-color: #ddd;
