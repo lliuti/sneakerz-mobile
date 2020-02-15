@@ -15,7 +15,7 @@ import {
   Category,
 } from './styles';
 
-export default function Feed() {
+export default function Feed({ navigation }) {
   return (
     <Container>
       <ProductByCategory>
@@ -23,7 +23,9 @@ export default function Feed() {
           <Category>Basketball</Category>
         </CategoryBox>
         <ProductGroup>
-          <Product>
+          <Product onPress={() =>
+            navigation.navigate('Product')
+          }>
             <ProductTitle>Jordan 87F</ProductTitle>
             <ProductPrice>R$ 385,90</ProductPrice>
             <Thumbnail source={{ uri: 'https://imageswscdn.wslojas.com.br/files/20717/MED_air-jordan-1-chicago-593069.png' }}/>
@@ -31,7 +33,9 @@ export default function Feed() {
               <MaterialIcons name='shopping-cart' color='#333' size={24}/>
             </AddToCart> */}
           </Product>
-          <Product>
+          <Product onClick={() => {
+            navigation.navigate('Product');
+          }}>
             <ProductTitle>Nike Air M32</ProductTitle>
             <ProductPrice>R$ 385,90</ProductPrice>
             <Thumbnail source={{ uri: 'https://cdn.shopify.com/s/files/1/1115/8382/products/air-jordan-footwear-air-jordan-3-retro-se-boy-s-grade-school-14861450838112_2048x.png?v=1581134564' }}/>
