@@ -1,67 +1,82 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
 import { MaterialIcons } from '@expo/vector-icons/';
 
 import Feed from './pages/Feed/index';
 import Cart from './pages/Cart/index';
+import Product from './pages/Product/index';
 
+const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
 export default function Routes() {
   return (
     <NavigationContainer>
-      <Tab.Navigator
-        tabBarOptions={{
-          activeTintColor: '#AA5EFF',
-          inactiveTintColor: '#999',
-          showLabel: false,
-        }}
+      <Stack.Navigator 
+      initialRouteName='App'
+      tabBarOptions={{
+        activeTintColor: '#AA5EFF',
+        inactiveTintColor: '#999',
+        showLabel: false,
+      }}
       >
-        <Tab.Screen
-          name='Feed' 
-          component={Feed}
-          options={{ 
-            tabBarLabel: 'Feed',            
-            headerTitleAlign: 'center',
-            headerStyle: {
-              backgroundColor: '#333',
-            },          
-            headerTitleStyle: {
-              color: '#fff',
-              fontSize: 24,
-            },
-            tabBarIcon: ({ color }) => (
-              <MaterialIcons name='store-mall-directory' size={32} color={color} />
-            ),
-          }}
-        />
-        <Tab.Screen
-          name='Cart' 
-          component={Cart}
-          options={{ 
-            tabBarLabel: 'Shopping Cart',
-            headerTitleAlign: 'center',
-            headerStyle: {
-              backgroundColor: '#333',
-            },
-            headerTitleStyle: {
-              color: '#fff',
-              fontSize: 24,
-            },
-            tabBarIcon: ({ color }) => (
-              <MaterialIcons name='shopping-cart' size={32} color={color} />
-            ),
-            
-          }}
-          />
-      </Tab.Navigator>
+        <Stack.Screen name='App' component={AppNavigation} options={{
+          headerShown: false
+        }} />
+        <Stack.Screen  name='Product' component={Product} options={{
+          headerTitleAlign: 'center',
+          headerStyle: {
+            backgroundColor: '#252525',
+          },
+          headerTintColor: '#f5f5f5'
+        }} />
+      </Stack.Navigator>
     </NavigationContainer>
-  )
+  );
 };
 
-// const Routes = NavigationContainer(
-//   createStackNavigator({
-//     Feed
-//   }),
-// );
+function AppNavigation() {
+  return (    
+    <Tab.Navigator>
+      <Tab.Screen
+        name='Feed' 
+        component={Feed}
+        options={{ 
+          tabBarLabel: 'Feed',            
+          headerTitleAlign: 'center',
+          headerStyle: {
+            backgroundColor: '#333',
+          },          
+          headerTitleStyle: {
+            color: '#fff',
+            fontSize: 24,
+          },
+          tabBarIcon: ({ color }) => (
+            <MaterialIcons name='store-mall-directory' size={32} color={color} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name='Cart' 
+        component={Cart}
+        options={{ 
+          tabBarLabel: 'Shopping Cart',
+          headerTitleAlign: 'center',
+          headerStyle: {
+            backgroundColor: '#333',
+          },
+          headerTitleStyle: {
+            color: '#fff',
+            fontSize: 24,
+          },
+          tabBarIcon: ({ color }) => (
+            <MaterialIcons name='shopping-cart' size={32} color={color} />
+          ),
+          
+        }}
+      />
+    </Tab.Navigator>
+  );
+};
