@@ -1,4 +1,5 @@
 import React from 'react';
+import { MaterialIcons } from '@expo/vector-icons/';
 
 import { 
   Container,
@@ -8,6 +9,9 @@ import {
   ProductPrice,
   AddToCartButton,
   ButtonText,
+  ProductDescription,
+  DescriptionTitle,
+  DescriptionText,
 } from './styles';
 
 export default function Product() {
@@ -18,9 +22,17 @@ export default function Product() {
       <BuyContainer>
         <ProductPrice>R$ 246,99</ProductPrice>
         <AddToCartButton>
-          <ButtonText>Add to Cart</ButtonText>          
+          <ButtonText>Add to cart</ButtonText>
         </AddToCartButton>
       </BuyContainer>
+      <ProductDescription>
+        <DescriptionTitle>
+          Details:
+        </DescriptionTitle>
+        <DescriptionText>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dolorem enim reprehenderit ea odit veritatis? Quisquam, ut. Cum maiores voluptatibus sapiente rerum, mollitia sunt, nostrum facilis, dignissimos sint aspernatur tenetur!
+        </DescriptionText>
+      </ProductDescription>
     </Container>
   );
 }
