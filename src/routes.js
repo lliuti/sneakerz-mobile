@@ -39,7 +39,13 @@ export default function Routes() {
 
 function AppNavigation() {
   return (    
-    <Tab.Navigator>
+    <Tab.Navigator
+      tabBarOptions={{
+        showLabel: false,
+        activeTintColor: '#AA5EFF',
+        inactiveTintColor: '#999',
+      }}
+    >
       <Tab.Screen
         name='Feed' 
         component={Feed}
