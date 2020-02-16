@@ -4,9 +4,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { MaterialIcons } from '@expo/vector-icons/';
 
-import Feed from './pages/Feed/index';
-import Cart from './pages/Cart/index';
-import Product from './pages/Product/index';
+import Feed from './screens/Feed/index';
+import Cart from './screens/Cart/index';
+import Product from './screens/Product/index';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
