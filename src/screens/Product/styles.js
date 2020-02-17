@@ -32,7 +32,7 @@ export const ProductPrice = styled.Text`
 `;
 
 export const AddToCartButton = styled.TouchableOpacity`
-  background: #cf5;
+  background: #FFF41C;
   padding: 10px 20px;
   border-radius: 10px;
   elevation: 2;
@@ -47,8 +47,11 @@ export const ButtonText = styled.Text`
 `;
 
 export const ProductDescription = styled.View`
-  margin-top: 50px;
+  margin-top: 25px;
+  padding-top: 25px;
   flex-direction: column;
+  border-top-color: #ddd;
+  border-top-width: 1px;
 `;
 
 export const DescriptionTitle = styled.Text`

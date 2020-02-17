@@ -15,12 +15,12 @@ export default function Routes() {
   return (
     <NavigationContainer>
       <Stack.Navigator 
-      initialRouteName='App'
-      tabBarOptions={{
-        activeTintColor: '#AA5EFF',
-        inactiveTintColor: '#999',
-        showLabel: false,
-      }}
+        initialRouteName='App'
+        tabBarOptions={{
+          activeTintColor: '#AA5EFF',
+          inactiveTintColor: '#999',
+          showLabel: false,
+        }}
       >
         <Stack.Screen name='App' component={AppNavigation} options={{
           headerShown: false
