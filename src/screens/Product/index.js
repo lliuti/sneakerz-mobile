@@ -14,14 +14,16 @@ import {
   DescriptionText,
 } from './styles';
 
-export default function Product() {
+export default function Product({ navigation }) {
   return (
     <Container>
-      <ProductName>Nike Air</ProductName>
+      <ProductName>Asics Jolt</ProductName>
       <ProductImage source={{ uri: 'https://cdn.webshopapp.com/shops/186401/files/284556393/asics-asics-jolt-2-ladies-running-shoes-2019.jpg' }}/>
       <BuyContainer>
-        <ProductPrice>R$ 246,99</ProductPrice>
-        <AddToCartButton>
+        <ProductPrice>R$ 215,90</ProductPrice>
+        <AddToCartButton onPress={() =>
+          navigation.navigate('Feed')
+        }>
           <ButtonText>Add to cart</ButtonText>
         </AddToCartButton>
       </BuyContainer>
