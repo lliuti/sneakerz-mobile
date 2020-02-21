@@ -20,7 +20,7 @@ export default function Product({ navigation }) {
       <ProductName>Asics Jolt</ProductName>
       <ProductImage source={{ uri: 'https://cdn.webshopapp.com/shops/186401/files/284556393/asics-asics-jolt-2-ladies-running-shoes-2019.jpg' }}/>
       <BuyContainer>
-        <ProductPrice>R$ 215,90</ProductPrice>
+        <ProductPrice>R$ 210,00</ProductPrice>
         <AddToCartButton onPress={() =>
           navigation.navigate('Feed')
         }>
