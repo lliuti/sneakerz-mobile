@@ -1,4 +1,3 @@
-import { StatusBar } from 'react-native';
 import styled from 'styled-components/native';
 
 export const Container = styled.ScrollView.attrs({
@@ -7,7 +6,6 @@ export const Container = styled.ScrollView.attrs({
   showHorizontalScrollIndicator: false,
 })`
   flex: 1;
-  margin-top: ${StatusBar.currentHeight}px;
 `;
 
 export const ProductByCategory = styled.View`

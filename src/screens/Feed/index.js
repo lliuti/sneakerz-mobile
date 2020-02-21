@@ -1,6 +1,7 @@
 import React from 'react';
 import { MaterialIcons } from '@expo/vector-icons/';
 
+import Header from '../../components/Header/index';
 import { 
   Container, 
   ProductByCategory,
@@ -17,6 +18,8 @@ import {
 
 export default function Feed({ navigation }) {
   return (
+    <>
+    <Header/>
     <Container>
       <ProductByCategory>
         <CategoryBox>
@@ -64,7 +67,7 @@ export default function Feed({ navigation }) {
             navigation.navigate('Product')
           }>
             <ProductTitle>Asics Jolt</ProductTitle>
-            <ProductPrice>R$ 215,90</ProductPrice>
+            <ProductPrice>R$ 210,00</ProductPrice>
             <Thumbnail source={{ uri: 'https://cdn.webshopapp.com/shops/186401/files/284556393/asics-asics-jolt-2-ladies-running-shoes-2019.jpg' }}/>
             {/* <AddToCart>
               <MaterialIcons name='shopping-cart' color='#333' size={24}/>
@@ -120,5 +123,6 @@ export default function Feed({ navigation }) {
         </ProductGroup>
       </ProductByCategory>
     </Container>
+    </>
   );
 }
